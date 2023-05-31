@@ -16,8 +16,7 @@
 
 <body>
     <div id="app">
-        <users-list />
-        @yield('content')
+       @yield('content')
     </div>
 </body>
 

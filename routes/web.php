@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\User\UsersListController;
 
-Route::get('/', function () {
-    return view('app');
-});
+Route::get('/', UsersListController::class)->name('users.list');

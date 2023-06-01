@@ -2,19 +2,29 @@
 namespace App\Http\Controllers;
 
 use App\Models\Book;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class TestController extends Controller
 {
 	public function __invoke(Request $request)
 	{
-		$bs = Book::all();
+		$bs = $this->getBooks();
+		$us = $this->getUsers();
 
-		echo count($bs) . ' livres:<br><br>';
-		foreach ($bs as $b) {
-			echo $b->title . ' - ' . $b->user_id . '<br>';
-		}
+		return view('gc7test.test', [
+			'users' => $us,
+			'books' => $bs,
+		]);
+	}
 
-		return view('test.test');
+	private function getBooks()
+	{
+		return Book::all();
+	}
+
+	private function getUsers()
+	{
+		return User::all();
 	}
 }

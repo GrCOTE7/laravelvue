@@ -14,14 +14,14 @@
                 @forelse ($user->books as $book)
                     {{ $book->id }}<br>
                 @empty
-                    <span style="text-align: center;">-</span>
+                    <div style="text-align: center;">-</div>
                 @endforelse
             </td>
             <td style="padding:3px 5px">
                 @forelse ($user->books as $book)
                     {{ $book->title }}<br>
                 @empty
-                    <span style="text-align: center;">-</span>
+                    <div style="text-align: center;">-</div>
                 @endforelse
             </td>
         </tr>

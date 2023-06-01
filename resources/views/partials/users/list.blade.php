@@ -22,7 +22,7 @@
                 @forelse ($user->books as $book)
                     {{ $book->title }}<br>
                 @empty
-                    <div style="text-align: center;">-</div>
+                    <div style="text-align: center;"><i>No book yet</i></div>
                 @endforelse
             </td>
         </tr>

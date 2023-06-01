@@ -9,8 +9,11 @@
         <tr>
             <td style="text-align: right; padding: 3px 5px">{{ $book->id }}</td>
             <td style="padding:3px 5px">{{ $book->title }}</td>
-            <td style="padding:3px 5px">{{ $book->user_id }}</td>
-            <td style="padding:3px 5px">Name{{ $book->user_id }}</td>
+            <td style="padding:3px 5px">{{ $book->user->id }}</td>
+            <td style="padding:3px 5px">{{ $book->user->name }}</td>
         </tr>
     @endforeach
+
+    {{  $books[0]->title }}
+
 </table>

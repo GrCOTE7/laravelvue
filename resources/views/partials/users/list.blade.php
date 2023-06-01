@@ -10,8 +10,20 @@
             <td style="text-align: right; padding: 3px 5px">{{ $user->id }}</td>
             <td style="padding:3px 5px">{{ $user->name }}</td>
 
-            <td style="padding:3px 5px">{{ $user->books }}</td>
-            <td style="padding:3px 5px">Name{{ $user->user_id }}</td>
+            <td style="padding:3px 5px; text-align: right">
+                @forelse ($user->books as $book)
+                    {{ $book->id }}<br>
+                @empty
+                    <span style="text-align: center;">-</span>
+                @endforelse
+            </td>
+            <td style="padding:3px 5px">
+                @forelse ($user->books as $book)
+                    {{ $book->title }}<br>
+                @empty
+                    <span style="text-align: center;">-</span>
+                @endforelse
+            </td>
         </tr>
     @endforeach
 </table>

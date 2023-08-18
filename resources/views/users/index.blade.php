@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h2>Listing</h2>
+<h2>Users Listing</h2>
 
 <users-list />
 
